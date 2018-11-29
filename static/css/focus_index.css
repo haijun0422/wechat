@@ -1,0 +1,141 @@
+@charset "gb2312";
+html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, blockquote, pre {
+    margin: 0;
+    padding: 0;
+    word-break: break-all;
+}
+img {
+    border: 0 none;
+    vertical-align: top;
+}
+ul, li, dt, dd {
+    list-style-type: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 14px;
+}
+input, select, button, textarea {
+    font-family: Arial,Helvetica,sans-serif,'ËÎÌו';
+    font-size: 12px;
+}
+button {
+    cursor: pointer;
+}
+select {
+    position: relative;
+    z-index: 4;
+}
+.glink:link, .glink:hover, .glink:active {
+    color: #999999;
+}
+.nlink:link, .nlink:hover, .nlink:active {
+    color: #111111;
+}
+.fixed:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.fixed {
+    display: block;
+    min-height: 1%;
+}
+.clear {
+    clear: both;
+    float: none !important;
+    font-size: 0;
+    height: 0 !important;
+    line-height: 0;
+    margin: 0 auto !important;
+    overflow: hidden;
+    padding: 0 !important;
+    width: auto !important;
+}
+.fl, .fr {
+    display: inline;
+    float: left;
+}
+.fr {
+    float: right;
+}
+.fb {
+    font-weight: bold;
+}
+.fblue {
+    color: #336699;
+}
+.fgreen {
+    color: #2E963D;
+}
+.fgreen {
+    color: #219A44;
+}
+.fgrey {
+    color: #999999;
+}
+.fcn {
+    font-family: "ËÎÌו";
+}
+.hidden {
+    display: none;
+}
+.ins {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #DDDDDD #EEEEEE #EEEEEE #DDDDDD;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    display: inline;
+    height: 19px;
+    line-height: 18px;
+    padding: 0 2px;
+}
+.btns {
+    border: 0 none;
+    cursor: pointer;
+}
+
+.psy_part{display:block;padding:25px 0 5px}
+.psy_part .psy_title{position:relative;padding-bottom:15px;width:750px}
+.psy_part .psy_title .fgreen{font-size:14px}
+.psy_part .psy_title .roll{position:absolute;top:3px;right:0}
+.psy_part .psy_title .roll a.jiantou{position: static;}
+.psy_part .psy_title .roll .jiantou:link,.psy_part .psy_title .roll .jiantou:visited,.psy_part .psy_title .roll .jiantou:hover,.psy_part .psy_title .roll .jiantou:active{margin-left:5px;display:inline-block;width:15px;height:15px;background:url(../images/icon.png) no-repeat 0 0}
+.psy_part .psy_title .roll .lact:link,.psy_part .psy_title .roll .lact:visited,.psy_part .psy_title .roll .lact:hover,.psy_part .psy_title .roll .lact:active{background-position:0 -20px}
+.psy_part .psy_title .roll .aright:link,.psy_part .psy_title .roll .aright:visited,.psy_part .psy_title .roll .aright:hover,.psy_part .psy_title .roll .aright:active{background-position:0 -80px}
+.psy_part .psy_title .roll .ract:link,.psy_part .psy_title .roll .ract:visited,.psy_part .psy_title .roll .ract:hover,.psy_part .psy_title .roll .ract:active{background-position:0 -100px}
+.psy_part .psy_title .roll span{display:inline-block;margin-left:5px;width:7px;height:15px;background:url(../images/icon.png) no-repeat 0 -40px}
+.psy_part .psy_title .roll .act{background-position:0 -60px}
+.psy_part .roll_box{display:block;position:relative;overflow:hidden;width:750px}
+.psy_part .roll_box .hbox{display:block;width:8000%}
+.psy_part .psy_fm{float:left;overflow:hidden;width:750px;height:195px}
+.psy_part .psy_fm .fbox{float:left;padding-right:20px;width:397px}
+.psy_part .psy_fm .fbox .pbox{float:left;margin-right:20px;width:195px}
+.psy_part .psy_fm .fbox .fa:link,.psy_part .psy_fm .fbox .fa:visited,.psy_part .psy_fm .fbox .fa:hover,.psy_part .psy_fm .fbox .fa:active{font-size:14px;display:block}
+.psy_part .psy_fm .fbox .fgrey{display:block;padding:5px 0}
+.psy_part .psy_fm .fbox .fgrey a:link,.psy_part .psy_fm .fbox .fgrey a:visited,.psy_part .psy_fm .fm_list .fgrey a:link,.psy_part .psy_fm .fm_list .fgrey a:visited{color:#999}
+.psy_part .psy_fm .listen{margin-bottom:-1px;*margin-bottom:2px;_margin-bottom:1px;display:inline-block;width:16px;height:14px;background:url(../images/icon.png) no-repeat 0 -118px}
+.psy_part .psy_fm .fm_list{float:left;overflow:hidden;width:223px;height:195px}
+.psy_part .psy_fm .fm_list dd{overflow:hidden;display:block;height:73px;width:223px;line-height:22px}
+.psy_part .psy_fm .fm_list dd .pbox{float:left;margin-right:15px;width:50px;height:50px}
+.psy_part .psy_fm .fm_list dd .descs{overflow:hidden;float:left;position:relative;width:158px}
+.psy_part .psy_fm .fm_list dd .descs .more{position:absolute;right:-3px;bottom:0;_bottom:3px}
+.psy_part .psy_fm .fm_list dd .fa{display:block;width:158px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.psy_part .psy_group{float:left;overflow:hidden;width:750px;height:206px}
+.psy_part .psy_group ul{width:110%}
+.psy_part .psy_group li{float:left;display:inline;margin:0 40px 40px 0;width:300px;height:83px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.psy_part .psy_group li .pbox{float:left;padding-top:3px;width:95px}
+.psy_part .psy_group li .t:link,.psy_part .psy_group li .t:visited,.psy_part .psy_group li .t:hover,.psy_part .psy_group li .t:active{font-size:14px}
+.psy_part .psy_group li .nlink:link,.psy_part .psy_group li .nlink:visited,.psy_part .psy_group li .nlink:hover,.psy_part .psy_group li .nlink:active{color:#777}
+.psy_part .psy_group li .fcn{color:#CCC}
+.psy_part .psy_group li .links{display:block;padding-top:5px}
+.psy_part .psy_test{float:left;overflow:hidden;width:750px}
+.psy_part .psy_test dl{width:110%}
+.psy_part .psy_test dd{float:left;display:inline;margin-right:6px;width:185px;text-align:center}
+.psy_part .psy_test dd img{display:block;margin-bottom:3px;width:185px;height:125px;}
+.psy_part .psy_test dd a:link,.psy_part .psy_test dd a:visited,.psy_part .psy_test dd a:hover,.psy_part .psy_test dd a:active{display:block;width:185px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}

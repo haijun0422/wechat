@@ -1,0 +1,770 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% load staticfiles %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>微信公众号导航平台</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/focus_index.css' %}"/>
+    <script type="text/javascript" src="{% static 'js/jquery-1.6.2.min.js' %}"></script>
+    <script src="{% static 'js/focus_index.js' %}"></script>
+    <script src="{% static 'js/jquery.tools.min.js' %}"></script>
+</head>
+<body>
+<include file="Public:header"/>
+<div class="middle home-index">
+    <div class="new-post"><em>最新：</em>
+        <YICMS_ad id="7"/>
+    </div>
+    <div class="lunbo-recommend cls">
+        <div class="slide-pics" id="banner-slide">
+            <div class="scrollable">
+                <ul class="items cls">
+                    <YICMS_flash>
+                        <li class="item"><a href="{YICMS:$flash.url}" class="tjitem" ><img src="{YICMS:$flash.img}"
+                                                                                            alt="{YICMS:$flash.title}""></a>
+                            <div class="info-wrapper">
+                                <div class="info-background"></div>
+                                <div class="pic-info">
+                                    <h3>{YICMS:$flash.title}</h3>
+                                    <p><span class="orange">小编推荐：</span>{YICMS:$flash.content}</p>
+                                    <a class="visite s-index-icon org-btn-blk" href="{YICMS:$flash.url}">关&nbsp;注</a>
+                                </div>
+                            </div>
+                        </li>
+                    </YICMS_flash>
+                </ul>
+            </div>
+            <div class="cover coverleft"></div>
+            <div class="cover coverright"></div>
+            <div class="prev prev-next s-index-icon">上一张</div>
+            <div class="next prev-next s-index-icon">下一张</div>
+        </div>
+        <div class="recommend">
+            <YICMS_ad id="3"/>
+        </div>
+    </div>
+    <div class="s-index-content cls">
+        <div class="main-content">
+            <div class="part s-index-excellent">
+                <div class="title">
+                    <h3><a href="/focus/" title="特别推荐" target="_self">特别推荐</a> <a
+                            href="http://wpa.qq.com/msgrd?v=3&uin={YICMS:$site_qq}&site={YICMS:$site_title}&menu=yes"
+                            style="color:#FF0000" target="_blank">【我要上推荐】</a></h3>
+                    <span class="s-index-icon excellent-icon">icon图标</span>
+                    <div class="op-page">
+                        <ul class="op-page-list cls" id="op-page-list">
+                            <li class="select"><span class="num">1</span></li>
+                            <li><span class="num">2</span></li>
+                            <li><span class="num">3</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ex-app-wrapper" id="ex-app-wrapper">
+                    <div class="scrollable">
+                        <div class="items cls">
+                            <div class="item">
+                                <ul class="excellent-list app-list cls">
+                                    <YICMS_wlist num="7" numsta="1" order="choose DESC" name="hoem_1">
+                                        <li>
+                                            <div class="normal-wrap">
+                                                <a target="_blank" href="{YICMS:$list.url}" title="{YICMS:$list.title}"
+                                                   class="pic">
+                                                    <img src="{YICMS:$list.face}" width="" height=""
+                                                         alt="{YICMS:$list.title}" title="{YICMS:$list.title}">
+                                                    <span class="mask mask1"></span>
+                                                </a>
+                                                <h4><a target="_blank" href="{YICMS:$list.url}"
+                                                       title="{YICMS:$list.title}">{YICMS:$list.title}</a></h4>
+                                                <div class="s-index-star s-index-star-10">
+                                                    <div class="wrap">
+                                                        <for start="0" end="$list.choose">
+                                                            <span> </span>
+                                                        </for>
+                                                    </div>
+                                                </div>
+                                                <div class="down-num"><!--今日关注<br/>次--></div>
+                                                <a target="_blank" class="download s-index-icon tjitem"
+                                                   href="{YICMS:$list.url}" title="{YICMS:$list.title}">关&nbsp;注</a>
+                                            </div>
+                                            <div class="app-info-pannel">
+                                                <h4>{YICMS:$list.title}</h4>
+                                                <div class="s-index-star s-index-star-10">
+                                                    <div class="s-index-star-big wrap">
+                                                        <for start="0" end="$list.choose">
+                                                            <span> </span>
+                                                        </for>
+                                                    </div>
+                                                </div>
+                                                <p class="detail">{YICMS:$list.content}&hellip;</p>
+                                                <div class="score"><span
+                                                        class="num"><em>{YICMS:$list.choose}</em></span>分
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </YICMS_wlist>
+                                    <!--关注-->
+                                    <YICMS_wlist num="7" numsta="7" order="recom DESC" name="hoem_2">
+                                        <li>
+                                            <div class="normal-wrap">
+                                                <a target="_blank" href="{YICMS:$list.url}" title="{YICMS:$list.title}"
+                                                   class="pic">
+                                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}"
+                                                         title="{YICMS:$list.title}">
+                                                    <span class="mask mask1"></span>
+                                                </a>
+                                                <h4><a target="_blank" href="{YICMS:$list.url}"
+                                                       title="{YICMS:$list.title}">{YICMS:$list.title}</a></h4>
+                                                <div class="s-index-star s-index-star-10">
+                                                    <div class="wrap">
+                                                        <for start="0" end="$list.choose">
+                                                            <span> </span>
+                                                        </for>
+                                                    </div>
+                                                </div>
+                                                <div class="down-num"><!--今日关注<br/>次--></div>
+                                                <a target="_blank" class="download s-index-icon tjitem"
+                                                   href="{YICMS:$list.url}" title="{YICMS:$list.title}">关&nbsp;注</a>
+                                            </div>
+                                            <div class="app-info-pannel">
+                                                <h4>{YICMS:$list.title}</h4>
+                                                <div class="s-index-star s-index-star-10">
+                                                    <div class="s-index-star-big wrap">
+                                                        <for start="0" end="$list.choose">
+                                                            <span> </span>
+                                                        </for>
+                                                    </div>
+                                                </div>
+                                                <p class="detail">{YICMS:$list.content}&hellip;</p>
+                                                <div class="score"><span
+                                                        class="num"><em>{YICMS:$list.choose}</em></span>分
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </YICMS_wlist>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <ul class="excellent-list app-list cls">
+                                    <!--第二页推荐-->
+                                    <YICMS_wlist num="7" numsta="14" order="recom DESC" name="hoem_3">
+                                        <li>
+                                            <div class="normal-wrap">
+                                                <a target="_blank" href="{YICMS:$list.url}" title="{YICMS:$list.title}"
+                                                   class="pic">
+                                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}"
+                                                         title="{YICMS:$list.title}">
+                                                    <span class="mask mask1"></span>
+                                                </a>
+                                                <h4><a target="_blank" href="{YICMS:$list.url}"
+                                                       title="{YICMS:$list.title}">{YICMS:$list.title}</a></h4>
+                                                <div class="s-index-star s-index-star-10">
+                                                    <div class="wrap">
+                                                        <for start="0" end="$list.choose">
+                                                            <span> </span>
+                                                        </for>
+                                                    </div>
+                                                </div>
+                                                <div class="down-num"><!--今日关注<br/>次--></div>
+                                                <a target="_blank" class="download s-index-icon tjitem"
+                                                   href="{YICMS:$list.url}" title="{YICMS:$list.title}">关&nbsp;注</a>
+                                            </div>
+                                            <div class="app-info-pannel">
+                                                <h4>{YICMS:$list.title}</h4>
+                                                <div class="s-index-star s-index-star-10">
+                                                    <div class="s-index-star-big wrap">
+                                                        <for start="0" end="$list.choose">
+                                                            <span> </span>
+                                                        </for>
+                                                    </div>
+                                                </div>
+                                                <p class="detail">{YICMS:$list.content}&hellip;</p>
+                                                <div class="score"><span class="num"><em>10</em></span>分</div>
+                                            </div>
+                                        </li>
+                                    </YICMS_wlist>
+                                    <!--关注-->
+                                    <YICMS_wlist num="7" numsta="21" order="hits DESC" name="hoem_4">
+                                        <li>
+                                            <div class="normal-wrap">
+                                                <a target="_blank" href="{YICMS:$list.url}" title="{YICMS:$list.title}"
+                                                   class="pic">
+                                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}"
+                                                         title="{YICMS:$list.title}">
+                                                    <span class="mask mask1"></span>
+                                                </a>
+                                                <h4><a target="_blank" href="{YICMS:$list.url}"
+                                                       title="{YICMS:$list.title}">{YICMS:$list.title}</a></h4>
+                                                <div class="s-index-star s-index-star-10">
+                                                    <div class="wrap">
+                                                        <for start="0" end="$list.choose">
+                                                            <span> </span>
+                                                        </for>
+                                                    </div>
+                                                </div>
+                                                <div class="down-num"><!--今日关注<br/>次--></div>
+                                                <a target="_blank" class="download s-index-icon tjitem"
+                                                   href="{YICMS:$list.url}" title="{YICMS:$list.title}">关&nbsp;注</a>
+                                            </div>
+                                            <div class="app-info-pannel">
+                                                <h4>{YICMS:$list.title}</h4>
+                                                <div class="s-index-star s-index-star-10">
+                                                    <div class="s-index-star-big wrap">
+                                                        <for start="0" end="$list.choose">
+                                                            <span> </span>
+                                                        </for>
+                                                    </div>
+                                                </div>
+                                                <p class="detail">{YICMS:$list.content}&hellip;</p>
+                                                <div class="score"><span class="num"><em>10</em></span>分</div>
+                                            </div>
+                                        </li>
+                                    </YICMS_wlist>
+                                </ul>
+                            </div>
+
+                            <div class="item">
+                                <ul class="excellent-list app-list cls">
+                                    <!--第三页推荐-->
+                                    <YICMS_wlist num="7" numsta="28" order="recom DESC" name="hoem_5">
+                                        <li>
+                                            <div class="normal-wrap">
+                                                <a target="_blank" href="{YICMS:$list.url}" title="{YICMS:$list.title}"
+                                                   class="pic">
+                                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}"
+                                                         title="{YICMS:$list.title}">
+                                                    <span class="mask mask1"></span>
+                                                </a>
+                                                <h4><a target="_blank" href="{YICMS:$list.url}"
+                                                       title="{YICMS:$list.title}">{YICMS:$list.title}</a></h4>
+                                                <div class="s-index-star s-index-star-10">
+                                                    <div class="wrap">
+                                                        <for start="0" end="$list.choose">
+                                                            <span> </span>
+                                                        </for>
+                                                    </div>
+                                                </div>
+                                                <div class="down-num"><!--今日关注<br/>次--></div>
+                                                <a target="_blank" class="download s-index-icon tjitem"
+                                                   href="{YICMS:$list.url}" title="{YICMS:$list.title}">关&nbsp;注</a>
+                                            </div>
+                                            <div class="app-info-pannel">
+                                                <h4>{YICMS:$list.title}</h4>
+                                                <div class="s-index-star s-index-star-10">
+                                                    <div class="s-index-star-big wrap">
+                                                        <for start="0" end="$list.choose">
+                                                            <span> </span>
+                                                        </for>
+                                                    </div>
+                                                </div>
+                                                <p class="detail">{YICMS:$list.content}&hellip;</p>
+                                                <div class="score"><span class="num"><em>10</em></span>分</div>
+                                            </div>
+                                        </li>
+                                    </YICMS_wlist>
+                                    <!--关注-->
+                                    <YICMS_wlist num="7" numsta="35" order="hits DESC" name="hoem_6">
+                                        <li>
+                                            <div class="normal-wrap">
+                                                <a target="_blank" href="{YICMS:$list.url}" title="{YICMS:$list.title}"
+                                                   class="pic">
+                                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}"
+                                                         title="{YICMS:$list.title}">
+                                                    <span class="mask mask1"></span>
+                                                </a>
+                                                <h4><a target="_blank" href="{YICMS:$list.url}"
+                                                       title="{YICMS:$list.title}">{YICMS:$list.title}</a></h4>
+                                                <div class="s-index-star s-index-star-10">
+                                                    <div class="wrap">
+                                                        <for start="0" end="$list.choose">
+                                                            <span> </span>
+                                                        </for>
+                                                    </div>
+                                                </div>
+                                                <div class="down-num"><!--今日关注<br/>次--></div>
+                                                <a target="_blank" class="download s-index-icon tjitem"
+                                                   href="{YICMS:$list.url}" title="{YICMS:$list.title}">关&nbsp;注</a>
+                                            </div>
+                                            <div class="app-info-pannel">
+                                                <h4>{YICMS:$list.title}</h4>
+                                                <div class="s-index-star s-index-star-10">
+                                                    <div class="s-index-star-big wrap">
+                                                        <for start="0" end="$list.choose">
+                                                            <span> </span>
+                                                        </for>
+                                                    </div>
+                                                </div>
+                                                <p class="detail">{YICMS:$list.content}&hellip;</p>
+                                                <div class="score"><span class="num"><em>10</em></span>分</div>
+                                            </div>
+                                        </li>
+                                    </YICMS_wlist>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-title s-index-icon"></div>
+                <div class="line"></div>
+                <div class="soft-title s-index-icon"></div>
+            </div>
+            <div class="s-index-hot-class part">
+                <div class="title">
+                    <h3>按行业分类</h3>
+                    <span class="s-index-icon hot-class-icon">icon图标</span>
+                </div>
+            </div>
+
+            <div class="all-cate part">
+                <ul class="all-cate-list cls">
+                    <YICMS_navlist type="1" name="y">
+                        <li><a target="_self" href="{YICMS:$nav.url}">{YICMS:$nav.name}</a></li>
+                    </YICMS_navlist>
+                    <li class="blank"><a target="_self" href="javascript:void(0)"></a></li>
+                    <li class="blank"><a target="_self" href="javascript:void(0)"></a></li>
+                    <li class="blank"><a target="_self" href="javascript:void(0)"></a></li>
+                    <li class="blank"><a target="_self" href="javascript:void(0)"></a></li>
+                    <li class="op-li unfold">
+                        <a href="javascript:void(0)" target="_self" hidefocus="true">
+                            <span class="close">收起</span><span class="open">展开</span>
+                            <span class="s-index-icon"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="height:450px; border:1px solid #ccc; overflow:hidden">
+
+                <!--娱乐-->
+                <div style="float:left; height:200px; text-align:center; width:174px;border-left:1px dashed #ccc; padding:5px;">
+                    <div style="background:#F9F9F9; margin:10px auto; width:100px; line-height:30px; border:1px solid #ccc">
+                        <a target="_self" href="/index.php?a=index&m=Weixin&yid=69">娱乐</a></div>
+                    <div class="s-index-midd" style="margin:5px 7px;">
+                        <YICMS_wlist num="2" yid="69" order="recom DESC" name="wlist69">
+                            <div class="app-show-block" style="margin-bottom:10px;">
+                                <a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank" class="pic">
+                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}">
+                                    <span class="mask mask1"></span>
+                                </a>
+                                <h4><a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank">{YICMS:$list.title}</a>
+                                </h4>
+                                <div class="s-index-star s-index-star-10">
+                                    <div class="s-index-star-big wrap">
+                                        <for start="0" end="$list.choose">
+                                            <span> </span>
+                                        </for>
+                                    </div>
+                                </div>
+                                <a class="s-index-down s-index-icon tjitem" href="{YICMS:$list.url}"
+                                   title="{YICMS:$list.title}" target="_blank">关&nbsp;注</a>
+                            </div>
+                        </YICMS_wlist>
+                    </div>
+                </div>
+
+                <!--网络科技-->
+                <div style="float:left; height:200px; text-align:center; width:174px;border-left:1px dashed #ccc; padding:5px;">
+                    <div style="background:#F9F9F9; margin:10px auto; width:100px; line-height:30px; border:1px solid #ccc">
+                        <a target="_self" href="/index.php?a=index&m=Weixin&yid=79">网络科技</a></div>
+                    <div class="s-index-midd" style="margin:5px 7px;">
+                        <YICMS_wlist num="2" yid="79" order="recom DESC" name="wlist79">
+                            <div class="app-show-block" style="margin-bottom:10px;">
+                                <a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank" class="pic">
+                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}">
+                                    <span class="mask mask1"></span>
+                                </a>
+                                <h4><a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank">{YICMS:$list.title}</a>
+                                </h4>
+                                <div class="s-index-star s-index-star-10">
+                                    <div class="s-index-star-big wrap">
+                                        <for start="0" end="$list.choose">
+                                            <span> </span>
+                                        </for>
+                                    </div>
+                                </div>
+                                <a class="s-index-down s-index-icon tjitem" href="{YICMS:$list.url}"
+                                   title="{YICMS:$list.title}" target="_blank">关&nbsp;注</a>
+                            </div>
+                        </YICMS_wlist>
+                    </div>
+                </div>
+
+                <!--时尚生活-->
+                <div style="float:left; height:200px; text-align:center; width:174px;border-left:1px dashed #ccc; padding:5px;">
+                    <div style="background:#F9F9F9; margin:10px auto; width:100px; line-height:30px; border:1px solid #ccc">
+                        <a target="_self" href="/index.php?a=index&m=Weixin&yid=78">时尚生活</a></div>
+                    <div class="s-index-midd" style="margin:5px 7px;">
+                        <YICMS_wlist num="2" order="recom DESC" name="wlist78">
+                            <div class="app-show-block" style="margin-bottom:10px;">
+                                <a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank" class="pic">
+                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}">
+                                    <span class="mask mask1"></span>
+                                </a>
+                                <h4><a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank">{YICMS:$list.title}</a>
+                                </h4>
+                                <div class="s-index-star s-index-star-10">
+                                    <div class="s-index-star-big wrap">
+                                        <for start="0" end="$list.choose">
+                                            <span> </span>
+                                        </for>
+                                    </div>
+                                </div>
+                                <a class="s-index-down s-index-icon tjitem" href="{YICMS:$list.url}"
+                                   title="{YICMS:$list.title}" target="_blank">关&nbsp;注</a>
+                            </div>
+                        </YICMS_wlist>
+                    </div>
+                </div>
+
+                <!--公众名人-->
+                <div style="float:left; height:200px; text-align:center; width:174px;border-left:1px dashed #ccc; padding:5px;">
+                    <div style="background:#F9F9F9; margin:10px auto; width:100px; line-height:30px; border:1px solid #ccc">
+                        <a target="_self" href="/index.php?a=index&m=Weixin&yid=77">公众名人</a></div>
+                    <div class="s-index-midd" style="margin:5px 7px;">
+                        <YICMS_wlist num="2" yid="77" order="recom DESC" name="wlist77">
+                            <div class="app-show-block" style="margin-bottom:10px;">
+                                <a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank" class="pic">
+                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}">
+                                    <span class="mask mask1"></span>
+                                </a>
+                                <h4><a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank">{YICMS:$list.title}</a>
+                                </h4>
+                                <div class="s-index-star s-index-star-10">
+                                    <div class="s-index-star-big wrap">
+                                        <for start="0" end="$list.choose">
+                                            <span> </span>
+                                        </for>
+                                    </div>
+                                </div>
+                                <a class="s-index-down s-index-icon tjitem" href="{YICMS:$list.url}"
+                                   title="{YICMS:$list.title}" target="_blank">关&nbsp;注</a>
+                            </div>
+                        </YICMS_wlist>
+                    </div>
+                </div>
+
+                <!--网络媒体-->
+                <div style="float:left; height:200px; text-align:center; width:174px;border-left:1px dashed #ccc; margin-top:10px; padding:5px;">
+                    <div style="background:#F9F9F9; margin:10px auto; width:100px; line-height:30px; border:1px solid #ccc">
+                        <a target="_self" href="/index.php?a=index&m=Weixin&yid=75">网络媒体</a></div>
+                    <div class="s-index-midd" style="margin:5px 7px;">
+                        <YICMS_wlist num="2" yid="75" order="recom DESC" name="wlist75">
+                            <div class="app-show-block" style="margin-bottom:10px;">
+                                <a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank" class="pic">
+                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}">
+                                    <span class="mask mask1"></span>
+                                </a>
+                                <h4><a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank">{YICMS:$list.title}</a>
+                                </h4>
+                                <div class="s-index-star s-index-star-10">
+                                    <div class="s-index-star-big wrap">
+                                        <for start="0" end="$list.choose">
+                                            <span> </span>
+                                        </for>
+                                    </div>
+                                </div>
+                                <a class="s-index-down s-index-icon tjitem" href="{YICMS:$list.url}"
+                                   title="{YICMS:$list.title}" target="_blank">关&nbsp;注</a>
+                            </div>
+                        </YICMS_wlist>
+                    </div>
+                </div>
+
+                <!--游戏-->
+                <div style="float:left; height:200px; text-align:center; width:174px;border-left:1px dashed #ccc; margin-top:10px; padding:5px;">
+                    <div style="background:#F9F9F9; margin:10px auto; width:100px; line-height:30px; border:1px solid #ccc">
+                        <a target="_self" href="/index.php?a=index&m=Weixin&yid=83">游戏</a></div>
+                    <div class="s-index-midd" style="margin:5px 7px;">
+                        <YICMS_wlist num="2" yid="83" order="recom DESC" name="wlist83">
+                            <div class="app-show-block" style="margin-bottom:10px;">
+                                <a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank" class="pic">
+                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}">
+                                    <span class="mask mask1"></span>
+                                </a>
+                                <h4><a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank">{YICMS:$list.title}</a>
+                                </h4>
+                                <div class="s-index-star s-index-star-10">
+                                    <div class="s-index-star-big wrap">
+                                        <for start="0" end="$list.choose">
+                                            <span> </span>
+                                        </for>
+                                    </div>
+                                </div>
+                                <a class="s-index-down s-index-icon tjitem" href="{YICMS:$list.url}"
+                                   title="{YICMS:$list.title}" target="_blank">关&nbsp;注</a>
+                            </div>
+                        </YICMS_wlist>
+                    </div>
+                </div>
+
+                <!--公益-->
+                <div style="float:left; height:200px; text-align:center; width:174px;border-left:1px dashed #ccc; margin-top:10px; padding:5px;">
+                    <div style="background:#F9F9F9; margin:10px auto; width:100px; line-height:30px; border:1px solid #ccc">
+                        <a target="_self" href="/index.php?a=index&m=Weixin&yid=86">公益</a></div>
+                    <div class="s-index-midd" style="margin:5px 7px;">
+                        <YICMS_wlist num="2" yid="86" order="recom DESC" name="wlist86">
+                            <div class="app-show-block" style="margin-bottom:10px;">
+                                <a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank" class="pic">
+                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}">
+                                    <span class="mask mask1"></span>
+                                </a>
+                                <h4><a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank">{YICMS:$list.title}</a>
+                                </h4>
+                                <div class="s-index-star s-index-star-10">
+                                    <div class="s-index-star-big wrap">
+                                        <for start="0" end="$list.choose">
+                                            <span> </span>
+                                        </for>
+                                    </div>
+                                </div>
+                                <a class="s-index-down s-index-icon tjitem" href="{YICMS:$list.url}"
+                                   title="{YICMS:$list.title}" target="_blank">关&nbsp;注</a>
+                            </div>
+                        </YICMS_wlist>
+                    </div>
+                </div>
+
+                <!--动漫-->
+                <div style="float:left; height:200px; text-align:center; width:174px;border-left:1px dashed #ccc; margin-top:10px; padding:5px;">
+                    <div style="background:#F9F9F9; margin:10px auto; width:100px; line-height:30px; border:1px solid #ccc">
+                        <a target="_self" href="/index.php?a=index&m=Weixin&yid=82">动漫</a></div>
+                    <div class="s-index-midd" style="margin:5px 7px;">
+                        <YICMS_wlist num="2" yid="82" order="recom DESC" name="wlist82">
+                            <div class="app-show-block" style="margin-bottom:10px;">
+                                <a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank" class="pic">
+                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}">
+                                    <span class="mask mask1"></span>
+                                </a>
+                                <h4><a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank">{YICMS:$list.title}</a>
+                                </h4>
+                                <div class="s-index-star s-index-star-10">
+                                    <div class="s-index-star-big wrap">
+                                        <for start="0" end="$list.choose">
+                                            <span> </span>
+                                        </for>
+                                    </div>
+                                </div>
+                                <a class="s-index-down s-index-icon tjitem" href="{YICMS:$list.url}"
+                                   title="{YICMS:$list.title}" target="_blank">关&nbsp;注</a>
+                            </div>
+                        </YICMS_wlist>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="s-index-hot-class part">
+                <div class="title">
+                    <h3>按地区分类</h3>
+                    <span class="s-index-icon hot-class-icon">icon图标</span></div>
+            </div>
+            <div class="all-cate part" style="height: 275px;">
+                <ul class="all-cate-list cls" style="height: 275px;">
+                    <YICMS_navlist type="0" name="d">
+                        <li><a target="_self" href="{YICMS:$nav.url}">{YICMS:$nav.name}</a></li>
+                    </YICMS_navlist>
+                    <li class="blank"><a href="javascript:void(0)" target="_self"></a></li>
+                </ul>
+            </div>
+            <div class="s-index-ad"><!-- ad --></div>
+            <div id="id_game_part" class="psy_part">
+
+                <div class="psy_title">
+                    <span class="fgreen" style="font:14px; font-weight:bolder">微信百科······</span> &nbsp;(<a class="glink"
+                                                                                                           href="/index.php?a=index&m=Article">更多</a>)&nbsp;
+                    <div class="roll">
+                        <a target="_self" title="后退" class="jiantou" href="javascript:void(0)"></a><span
+                            class="act"></span><span></span><a target="_self" title="前进" class="jiantou aright ract"
+                                                               href="javascript:void(0)"></a>
+                    </div>
+                </div>
+                <div class="roll_box">
+                    <div class="hbox">
+                        <div class="psy_test">
+                            <dl>
+                                <YICMS_arlist num="4" order="id desc">
+                                    <dd>
+                                        <a href="{YICMS:$list.url}" target="_blank" title="{YICMS:$list.title}">
+                                            <img width="144" height="96" hover="true" alt="{YICMS:$list.title}"
+                                                 src="{YICMS:$list.img}" style="opacity: 1;">
+                                        </a>
+                                        <a href="{YICMS:$list.url}" target="_blank" title="{YICMS:$list.title}"
+                                           class="nlink">{YICMS:$list.title}</a>
+                                    </dd>
+                                </YICMS_arlist>
+                            </dl>
+                        </div>
+                        <!--1-->
+                        <div class="psy_test">
+                            <dl>
+                                <YICMS_arlist num="4" order="click desc">
+                                    <dd>
+                                        <a href="{YICMS:$list.url}" target="_blank" title="{YICMS:$list.title}">
+                                            <img width="144" height="96" hover="true" alt="{YICMS:$list.title}"
+                                                 src="{YICMS:$list.img}" style="opacity: 1;">
+                                        </a>
+                                        <a href="{YICMS:$list.url}" target="_blank" title="{YICMS:$list.title}"
+                                           class="nlink">{YICMS:$list.title}</a>
+                                    </dd>
+                                </YICMS_arlist>
+
+                            </dl>
+                        </div>
+                        <!--2-->
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(function () {
+                    new Rollable('#id_game_part', 750);
+                });
+            </script>
+        </div>
+        <div class="s-index-side">
+            <div class="part weekly game-top10 cls">
+                <div class="title">
+                    <h3><a href="/zuixin/" title="最新微信" target="_self">最新收录</a></h3>
+                    <span class="s-index-icon soft-must-icon">icon图标</span></div>
+                <ul class="weekly-list cls">
+                    <YICMS_wlist num="10" order="time DESC" name="home_time">
+                        <li>
+                            <div class="app-show-title">
+                                <span class="<if condition=" $k gt 3">num
+                                <else/>
+                                num s-index-org</if>">{YICMS:$k}.</span>
+                                <a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank">{YICMS:$list.title}</a>
+                            </div>
+                            <div class="app-show-block">
+                                <a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank" class="pic">
+                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}">
+                                    <span class="mask mask2"></span>
+                                </a>
+                                <div class="s-index-star s-index-star-10">
+                                    <div class="s-index-star-big wrap">
+                                        <for start="0" end="$list.choose">
+                                            <span> </span>
+                                        </for>
+                                    </div>
+                                </div>
+                                <a class="s-index-down s-index-icon tjitem" href="{YICMS:$list.url}"
+                                   title="{YICMS:$list.title}" target="_blank">关&nbsp;注</a>
+                            </div>
+                        </li>
+                    </YICMS_wlist>
+                </ul>
+            </div>
+            <div class="part weekly game-top10 cls">
+                <div class="title">
+                    <h3><a href="/focus/" title="每日排行" target="_self">每日排行</a></h3>
+                    <span class="s-index-icon soft-must-icon">icon图标</span></div>
+                <ul class="weekly-list cls">
+                    <YICMS_wlist num="9" order="hits DESC" name="home_recom">
+                        <li>
+                            <div class="app-show-title">
+                                <span class="<if condition=" $k gt 3">num
+                                <else/>
+                                num s-index-org</if>">{YICMS:$k}.</span>
+                                <a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank">{YICMS:$list.title}</a>
+                            </div>
+                            <div class="app-show-block">
+                                <a href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank" class="pic">
+                                    <img src="{YICMS:$list.face}" alt="{YICMS:$list.title}">
+                                    <span class="mask mask2"></span>
+                                </a>
+                                <div class="s-index-star s-index-star-10">
+                                    <div class="s-index-star-big wrap">
+                                        <for start="0" end="$list.choose">
+                                            <span> </span>
+                                        </for>
+                                    </div>
+                                </div>
+                                <a class="s-index-down s-index-icon tjitem" href="{YICMS:$list.url}"
+                                   title="{YICMS:$list.title}" target="_blank">关&nbsp;注</a>
+                            </div>
+                        </li>
+                    </YICMS_wlist>
+                </ul>
+            </div>
+            <div class="part we-down">
+                <div class="title"><h3>大家都在关注</h3><span class="s-index-icon we-down-icon">icon图标</span></div>
+                <ul class="we-down-list">
+                    <YICMS_wlist num="10" order="hits DESC" name="home_rank">
+                        <li>
+                            <div class="app-show-block">
+                                <a class="pic" href="{YICMS:$list.url}" title="{YICMS:$list.title}" target="_blank"><img
+                                        alt="{YICMS:$list.title}" src="{YICMS:$list.face}"><span
+                                        class="mask mask1"></span></a>
+                                <h4><a href="">{YICMS:$list.title}</a></h4>
+                                <div class="s-index-star s-index-star-10">
+                                    <div class="wrap">
+                                        <for start="0" end="$list.choose">
+                                            <span> </span>
+                                        </for>
+                                    </div>
+                                </div>
+                                <a class="s-index-down s-index-icon tjitem" href="{YICMS:$list.url}"
+                                   title="{YICMS:$list.title}" target="_blank">关&nbsp;注</a>
+                            </div>
+                        </li>
+                    </YICMS_wlist>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="middle home-index">
+    <div style="font-size: 14px; font-weight: 800; height: 25px;" class="link_title">友情链接</div>
+    <div class="link_content">
+        <YICMS_flink>
+            <a href="{YICMS:$flink.url}" target="_blank">{YICMS:$flink.name}</a>&nbsp;&nbsp;
+        </YICMS_flink>
+    </div>
+</div>
+<div class="footer">
+    <div class="bottom-pic">
+        <include file="Public:footer"/>
+    </div>
+</div>
+<script type="text/javascript">$('body > a').remove();</script>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+//$('#word').focus();
+    });
+</script>
+<script type="text/javascript">
+    (function (a) {
+        a(document).ready(function () {
+            a(".tjitem").live("mousedown", function () {
+                var b = a(this).attr("tjurl");
+                b && a.get(b + "&r=" + Math.random())
+            });
+            $("#rd-hdtags a").live("mousedown", function () {
+                var h = $(this).attr("h");
+                var q = $(this).attr("q");
+                var w = $("#word").val();
+                if (w == "") {
+                    url = h;
+                } else {
+                    url = h + q + encodeURIComponent(w) + "&ie=utf-8";
+                }
+                document.location.href = url;
+            })
+        })
+    })(jQuery);
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".nav-list li:not(.selected)").hover(function () {
+            $(this).addClass("hover")
+        }, function () {
+            $(this).removeClass("hover")
+        });
+    });
+</script>
+<script type="text/javascript" src="{% static 'js/we_down.js' %}"></script>
+</html>
